@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kkbox.painter.app.MainActivity" >
+
+    <item
+        android:id="@+id/reset_draw_board"
+        android:orderInCategory="100"
+        android:title="@string/clear"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/save_draw_board_jpeg"
+        android:orderInCategory="100"
+        android:title="@string/save_jpg"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/save_draw_board_png"
+        android:orderInCategory="100"
+        android:title="@string/save_png"
+        app:showAsAction="never"/>
+
+</menu>

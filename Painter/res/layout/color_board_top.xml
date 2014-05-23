@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color_board_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/color0_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#000000" />
+
+    <Button
+        android:id="@+id/color1_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FF0000" />
+
+    <Button
+        android:id="@+id/color2_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#0000FF" />
+
+    <Button
+        android:id="@+id/color3_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:id="@+id/color4_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FF00FF" />
+
+    <Button
+        android:id="@+id/color5_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#00FFFF" />
+
+    <Button
+        android:id="@+id/color6_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FFBBBB" />
+
+    <Button
+        android:id="@+id/color7_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FFFF00" />
+
+    <Button
+        android:id="@+id/color8_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#00AACC" />
+
+    <Button
+        android:id="@+id/color9_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#668800" />
+
+</LinearLayout>

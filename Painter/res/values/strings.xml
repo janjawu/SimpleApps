@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Painter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="clear">Clear</string>
+    <string name="save_jpg">Save JPG</string>
+    <string name="save_png">Save PNG</string>
+
+</resources>
