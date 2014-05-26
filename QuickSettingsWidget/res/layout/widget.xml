@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/btn_wifi"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_left"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/img_description"
+            android:scaleType="center"
+            android:src="@drawable/wifi_off" />
+
+        <TextView
+            android:id="@+id/txt_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/wifi"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_bluetooth"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/bt_off" />
+
+        <TextView
+            android:id="@+id/txt_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/bluetooth"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_mobile"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/data_off" />
+
+        <TextView
+            android:id="@+id/txt_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/mobile"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_gps"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/gps_off" />
+
+        <TextView
+            android:id="@+id/txt_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/gps"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_sync"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/sync_off" />
+
+        <TextView
+            android:id="@+id/txt_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/sync"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_rotate"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/rotation_off" />
+
+        <TextView
+            android:id="@+id/txt_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/rotate"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_volume"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/voice_normal" />
+
+        <TextView
+            android:id="@+id/txt_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/volume"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_brightness"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/appwidget_button_right"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/bright_low" />
+
+        <TextView
+            android:id="@+id/txt_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/light"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ind_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+</LinearLayout>

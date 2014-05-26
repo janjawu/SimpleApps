@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QuickSettings Widget</string>
+    <string name="img_description">Image View</string>
+    <string name="wifi">Wifi</string>
+    <string name="bluetooth">BT</string>
+    <string name="mobile">Mobile</string>
+    <string name="gps">GPS</string>
+    <string name="sync">Sync</string>
+    <string name="rotate">Rotate</string>
+    <string name="light">Light</string>
+    <string name="volume">Volume</string>
+
+</resources>
