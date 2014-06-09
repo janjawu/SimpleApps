@@ -74,11 +74,6 @@ public class InfixBuilder {
     public void removeLast() {
         if (hasOperandInBuffer()) {
             operandBuffer.deleteCharAt(operandBuffer.length() - 1);
-            if (!hasOperandInBuffer()) {
-                if (hasSingleLeftBracket()) {
-                    infix = infix.substring(0, infix.length() - 1);
-                }
-            }
         } else {
             if (infix.length() > 0) {
                 String last = infix.substring(infix.length() - 1,
@@ -88,6 +83,13 @@ public class InfixBuilder {
                 } else {
                     infix = infix.substring(0, infix.length() - 1);
                 }
+            }
+        }
+
+        if (hasSingleLeftBracket()) {
+            String last = infix.substring(infix.length() - 1, infix.length());
+            if (!hasOperandInBuffer() && !isOperand(last)) {
+                infix = infix.substring(0, infix.length() - 2);
             }
         }
     }
@@ -184,9 +186,10 @@ public class InfixBuilder {
         if (isHead) {
             hasNegative = infix.equals("(-");
         } else if (!isHead) {
-            String lastTwoChar = infix.substring(infix.length() - 2,
+            String lastTwoChar = infix.substring(infix.length() - 3,
                     infix.length());
-            hasNegative = lastTwoChar.equals("*-") || lastTwoChar.equals("/-");
+            hasNegative = lastTwoChar.equals("*(-")
+                    || lastTwoChar.equals("/(-");
         }
         return hasNegative;
     }
@@ -229,6 +232,10 @@ public class InfixBuilder {
         String last = infix.substring(infix.length() - 1, infix.length());
         if (hasOperandInBuffer()) {
             catchOperand();
+        } else if (isOperand(last)) {
+            if (hasSingleLeftBracket()) {
+                infix = infix + ")";
+            }
         } else if (isOperator(last)) {
             if (hasSingleLeftBracket()) {
                 infix = infix.substring(0, infix.length() - 2);
