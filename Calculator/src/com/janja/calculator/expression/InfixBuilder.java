@@ -186,10 +186,10 @@ public class InfixBuilder {
         if (isHead) {
             hasNegative = infix.equals("(-");
         } else if (!isHead) {
-            String lastTwoChar = infix.substring(infix.length() - 3,
+            String lastThreeChar = infix.substring(infix.length() - 3,
                     infix.length());
-            hasNegative = lastTwoChar.equals("*(-")
-                    || lastTwoChar.equals("/(-");
+            hasNegative = lastThreeChar.equals("*(-")
+                    || lastThreeChar.equals("/(-");
         }
         return hasNegative;
     }
@@ -229,6 +229,9 @@ public class InfixBuilder {
     }
 
     private void complete() {
+        if (infix.length() <= 0) {
+            return;
+        }
         String last = infix.substring(infix.length() - 1, infix.length());
         if (hasOperandInBuffer()) {
             catchOperand();

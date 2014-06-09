@@ -60,7 +60,12 @@ public class Postfix {
                 stack.push(result.toString());
             }
         }
-        return stack.pop();
+
+        if (stack.isEmpty()) {
+            return "";
+        } else {
+            return stack.pop();
+        }
     }
 
     private boolean isOperator(String val) {

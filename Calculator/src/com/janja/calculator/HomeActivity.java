@@ -136,6 +136,7 @@ public class HomeActivity extends ActionBarActivity implements OnClickListener {
             infixBuilder.clear();
         } else if (view == equal) {
             String resultText = infixBuilder.getInfix().evaluate();
+            infixBuilder.clear();
             result.setText(resultText);
             return;
         }
