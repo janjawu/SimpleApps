@@ -215,7 +215,13 @@ public class InfixBuilder {
 
     private boolean isOperand(String val) {
         String operands = "0123456789";
-        return operands.contains(val);
+        for (int i = 0; i < val.length(); i++) {
+            String element = val.substring(i, i + 1);
+            if (!operands.contains(element)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private boolean isPoint(String val) {
@@ -229,13 +235,17 @@ public class InfixBuilder {
     }
 
     private void complete() {
-        if (infix.length() <= 0) {
+        if (infix.length() <= 0 && !hasOperandInBuffer()) {
             return;
         }
-        String last = infix.substring(infix.length() - 1, infix.length());
+
         if (hasOperandInBuffer()) {
             catchOperand();
-        } else if (isOperand(last)) {
+            return;
+        }
+
+        String last = infix.substring(infix.length() - 1, infix.length());
+        if (isOperand(last)) {
             if (hasSingleLeftBracket()) {
                 infix = infix + ")";
             }
