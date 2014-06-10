@@ -34,6 +34,7 @@ public class HomeActivity extends ActionBarActivity implements OnClickListener {
     private Button equal;
 
     private InfixBuilder infixBuilder;
+    private String resultText = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,27 +122,40 @@ public class HomeActivity extends ActionBarActivity implements OnClickListener {
         } else if (view == nine) {
             infixBuilder.addElement("9");
         } else if (view == sum) {
+            addResultToInfixBuilder();
             infixBuilder.addElement("+");
         } else if (view == subtract) {
+            addResultToInfixBuilder();
             infixBuilder.addElement("-");
         } else if (view == multiply) {
+            addResultToInfixBuilder();
             infixBuilder.addElement("*");
         } else if (view == divide) {
+            addResultToInfixBuilder();
             infixBuilder.addElement("/");
         } else if (view == point) {
             infixBuilder.addElement(".");
         } else if (view == back) {
+            addResultToInfixBuilder();
             infixBuilder.removeLast();
         } else if (view == clear) {
             infixBuilder.clear();
         } else if (view == equal) {
-            String resultText = infixBuilder.getInfix().evaluate();
+            addResultToInfixBuilder();
+            resultText = infixBuilder.getInfix().evaluate();
             infixBuilder.clear();
-            infixBuilder.addElement(resultText);
             result.setText(resultText);
             return;
         }
+        resultText = "";
         updateUI(infixBuilder.getTempInfix());
+    }
+
+    private void addResultToInfixBuilder() {
+        for (int i = 0; i < resultText.length(); i++) {
+            String element = resultText.substring(i, i + 1);
+            infixBuilder.addElement(element);
+        }
     }
 
     private void updateUI(String content) {
